@@ -1,6 +1,6 @@
 import React from "react";
+import {AntdRegistry} from '@ant-design/nextjs-registry';
 import type {Metadata} from "next";
-
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -16,8 +16,7 @@ interface Props {
 export default function RootLayout({children,}: Props) {
     return (
         <html lang="zh-CN">
-        <meta name='robots' content='index'/>
-        <body>{children}</body>
+        <body><AntdRegistry>{children}</AntdRegistry></body>
         </html>
     );
 }
